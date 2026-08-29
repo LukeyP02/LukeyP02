@@ -22,7 +22,7 @@ It does not run your agent or call an LLM — it sits underneath the tool-call l
 
 ### How I build
 
-Solo throughput comes from orchestration, not typing. Modyx was built across **~45 parallel git worktrees**, each driven by an agent under a hand-written orchestrator/worker protocol, alongside scheduled autonomous agents that pick up work unattended, gate on a known test baseline, and open rolling draft PRs rather than touching main.
+Solo throughput comes from orchestration, not typing. Modyx was built across **49 parallel git worktrees**, each driven by an agent under a hand-written orchestrator/worker protocol, alongside scheduled autonomous agents that pick up work unattended, gate on a known test baseline, and open rolling draft PRs rather than touching main.
 
 Everything those agents need is markdown committed to the repo. The harness depreciates; the prompt and skill library appreciates, so the effort goes into the `.md`.
 
@@ -30,8 +30,6 @@ Everything those agents need is markdown committed to the repo. The harness depr
 
 - **Boph** — deterministic tutoring engine. Exam spec atomised into version-controlled YAML with a prerequisite graph, and a per-student model (readiness as stage × freshness, spaced-repetition ladder, misconception tracking) that self-tests offline with no API key and no network.
 - **Commis** — autonomy-first meal-planning iOS app. A P0–P4 priority engine surfacing the highest-priority decision on load, with a two-phase commit and audit pipeline.
-
-Code snapshots and full READMEs at [LukeyP02/cv-portfolio](https://github.com/LukeyP02/cv-portfolio).
 
 ### Stack
 
